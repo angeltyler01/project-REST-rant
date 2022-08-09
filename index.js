@@ -6,12 +6,15 @@ const express = require('express')
 //initialize express
 const app = express()
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+
 //import router from places.js
 app.use('/places', require('./controllers/places'))
 
 //creating homepage route
 app.get('/', (req,res) => {
-    res.send('Welcome!')
+    res.render('Home')
 })
 
 //Wildcard route
