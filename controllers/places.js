@@ -80,7 +80,6 @@ router.post('/', (req, res) => {
     }
   })
   
-  
 
   router.delete('/:id', (req, res) => {
     let id = Number(req.params.id)
@@ -95,6 +94,8 @@ router.post('/', (req, res) => {
       res.redirect('/places')
     }
   })
+
+
 
 
   
